@@ -16,7 +16,7 @@
 
 ///////////////////////////// MENU: STICKY / HIDE
 const menu = document.querySelector(".grad");
-const banner = document.querySelector(".carrosel");
+const banner = document.querySelector(".menuhid");
 let isIntersecting = false;
 
 const obs = new IntersectionObserver(
@@ -38,7 +38,7 @@ const obs = new IntersectionObserver(
   {
     root: null,
     threshold: 0,
-    rootMargin: "-600px 0px 0px 0px",
+    rootMargin: "0px 0px 0px 0px",
   }
 );
 obs.observe(banner);
@@ -75,6 +75,43 @@ xbtn.addEventListener("click", () => {
     inputsr.focus();
   } else {
     xbtn.name = "search-outline";
+  }
+});
+// MENUMOBILE
+const menumobile = document.querySelector(".menuiconion");
+const mmtitles = document.querySelectorAll(".tituloh");
+
+mmtitles.forEach(function (mmt) {
+  mmt.querySelector(".flexopenmenu").addEventListener("click", () => {
+    if (
+      !mmt.classList.contains("topen") &&
+      headsrch.classList.contains("openm")
+    ) {
+      mmtitles.forEach(function (mmc) {
+        mmc.classList.remove("topen");
+      });
+      console.log("if true");
+      mmt.classList.toggle("topen");
+    } else {
+      console.log("else");
+
+      mmtitles.forEach(function (mmc) {
+        mmc.classList.remove("topen");
+      });
+    }
+  });
+});
+
+menumobile.addEventListener("click", () => {
+  menu.classList.toggle("openm");
+  if (headsrch.classList.contains("openm")) {
+    menumobile.name = "close-outline";
+    inputsr.focus();
+  } else {
+    mmtitles.forEach(function (mmc) {
+      mmc.classList.remove("topen");
+    });
+    menumobile.name = "menu-outline";
   }
 });
 

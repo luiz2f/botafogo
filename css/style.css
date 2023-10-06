@@ -39,7 +39,7 @@ header {
   transition: border 0.3s;
 }
 .grad {
-  background-image: url(img/bannersite.png);
+  background-image: url(../img/bannersite.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 130%;
@@ -49,7 +49,7 @@ header {
   justify-content: space-between;
   flex-direction: column;
   height: 200rem;
-  width: 1150rem;
+  width: 1222rem;
   margin: 0 auto;
   padding-top: 30rem;
   padding-bottom: 18rem;
@@ -57,7 +57,7 @@ header {
 
 .topheader {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: end;
 }
 .redessociais {
@@ -91,6 +91,7 @@ header {
   );
   margin: 0 28rem;
   align-self: center;
+  margin-left: 32rem;
 }
 .bottomheader {
   display: flex;
@@ -108,6 +109,7 @@ header {
   height: 1px;
   position: relative;
   top: -110px;
+  z-index: 5;
 }
 
 .borda {
@@ -115,7 +117,7 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -1%);
   z-index: 1;
 }
 .escdiv {
@@ -137,28 +139,49 @@ header {
   display: flex;
 }
 
+.menuicon {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+}
+.menuicon:hover {
+  color: #000;
+  background-color: #fff;
+}
+.menuiconion {
+  display: flex;
+  height: 36rem;
+  width: 36rem;
+  padding: 3rem 4rem;
+  align-items: center;
+  --ionicon-stroke-width: 55rem;
+}
+
 .sites {
   display: flex;
   align-self: self-end;
   margin-left: 18rem;
 }
-.princi:link,
-.princi:visited {
+.flexopenmenu {
   color: #fff;
   text-decoration: none;
   font-size: 19rem;
   text-transform: uppercase;
   letter-spacing: 1.1px;
-  transition: all 0.1s;
   border-bottom: 2px solid transparent;
+
+  transition: all 0.1s;
 }
-.tituloh:hover .princi,
-.tituloh:active .princi {
+
+.tituloh:hover {
+  padding-bottom: 2rem;
+}
+.grad:not(.openm) .tituloh:hover .flexopenmenu {
   color: #fff;
-  padding-bottom: 2px;
   border-bottom: 4px solid #fff;
 }
 .tituloh {
+  cursor: pointer;
   padding-bottom: 31rem;
   margin-bottom: -31rem;
 }
@@ -185,8 +208,15 @@ header {
   color: #000;
   border-bottom: 1px solid #555;
 }
-
-.tituloh:hover .backdrop {
+.titulochev {
+  display: none;
+}
+.subt.pr:hover,
+.subt.pr:active {
+  color: #000;
+  border-bottom: none;
+}
+.grad:not(.openm) .tituloh:hover .backdrop {
   background-color: #fff;
   display: flex;
 }
@@ -194,7 +224,7 @@ header {
   display: grid;
 }
 
-.tituloh.t3:hover .backdrop {
+.grad:not(.openm) .tituloh.t3:hover .backdrop {
   left: 50%;
   width: max-content;
   display: flex;
@@ -220,10 +250,10 @@ header {
 }
 
 /* /// CLUBE//// */
-.subt.pr:link,
-.subt.pr:visited,
-.subt.pr:hover,
-.subt.pr:active {
+.grad:not(.openm).subt.pr:link,
+.grad:not(.openm).subt.pr:visited,
+.grad:not(.openm).subt.pr:hover,
+.grad:not(.openm).subt.pr:active {
   color: #000;
   border: 1px solid transparent;
   font-family: "Russo One", sans-serif;
@@ -288,7 +318,7 @@ a .iconeentrar {
   display: block;
   height: 0;
   transition: all 0.2s;
-  background-image: url(img/bannersite2.png);
+  background-image: url(../img/bannersite2.png);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -374,7 +404,7 @@ a .iconeentrar {
 
 .grad {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   z-index: 5;
   transition: transform 0.3s;
 }
@@ -433,7 +463,7 @@ BANNER
 ///////////////////////////////*/
 .posthid {
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
 }
 .posthid.dragatv {
   cursor: grabbing;
@@ -450,7 +480,7 @@ BANNER
   height: 650rem;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   z-index: -2;
   flex: 0 0 100%;
   transition: background 0.3s;
@@ -458,7 +488,6 @@ BANNER
 
 .destaques {
   position: relative;
-  padding-top: 180rem;
 }
 
 .postgrad {
@@ -546,7 +575,7 @@ BANNER
   display: flex;
   position: absolute;
   align-items: center;
-  top: 50%;
+  top: 40%;
   width: 100%;
 }
 
@@ -604,6 +633,11 @@ BANNER
 }
 .bola.ativa {
   background-color: #fff;
+}
+
+.menuhid {
+  height: 180rem;
+  background-color: #f2f2f2;
 }
 
 /* /////////////////////////// */
@@ -905,23 +939,23 @@ tbody:before {
 .lojaonline {
   background-color: #f2f2f2;
   padding-bottom: 96rem;
-  background-image: url(img/loja/efeitos/teste1.png);
+  background-image: url(../img/loja/efeitos/teste1.png);
   background-size: cover;
   transition: background 0.8s;
 }
 
 .lojaonline.tche {
-  background-image: url(img/loja/efeitos/fun\ tche.jpg);
+  background-image: url(../img/loja/efeitos/fun\ tche.jpg);
   background-position: center;
   box-shadow: inset 0 0 15px 0 #c9e9ea;
 }
 .lojaonline.adry {
-  background-image: url(img/loja/efeitos/fun\ adry.jpg);
+  background-image: url(../img/loja/efeitos/fun\ adry.jpg);
   background-position: center;
   box-shadow: inset 0 0 15px 0 #f2f2f2;
 }
 .lojaonline.edu {
-  background-image: url(img/loja/efeitos/fun\ ed.jpg);
+  background-image: url(../img/loja/efeitos/fun\ ed.jpg);
   background-position: center;
   box-shadow: inset 0 0 15px 0 #000;
 }
@@ -969,13 +1003,13 @@ tbody:before {
 }
 
 .flexloja:nth-child(1) .imgloja {
-  background-image: url(img/loja/tchetche.jpg);
+  background-image: url(../img/loja/tchetche.jpg);
 }
 .flexloja:nth-child(2) .imgloja {
-  background-image: url(img/loja/adry.jpg);
+  background-image: url(../img/loja/adry.jpg);
 }
 .flexloja:nth-child(3) .imgloja {
-  background-image: url(img/loja/edu.jpg);
+  background-image: url(../img/loja/edu.jpg);
 }
 .flexloja::after {
   transition: all 0.3s;
@@ -997,12 +1031,6 @@ tbody:before {
 }
 .flexloja:hover .imgloja {
   transform: scale(1.05);
-}
-
-.flexloja:nth-child(1):hover .btncompre {
-  /* border-right: 4px solid #fff;
-  border-bottom: 4px solid #fff;
-  border-left: 4px solid #fff; */
 }
 
 .imgloja {
@@ -1136,7 +1164,7 @@ iframe {
 /* ////////////////////////////////////////// */
 .apoio {
   background-color: #fff;
-  background-image: url(img/fundo\ patrocinadores2.png);
+  background-image: url(../img/fundo\ patrocinadores2.png);
   background-repeat: revert;
   background-position: center;
   padding: 96rem 0 192rem;
@@ -1248,7 +1276,7 @@ iframe {
 .escudofot img {
   width: 100%;
 }
-.teste {
+.omais {
   color: #555;
   font-size: 32rem;
   margin: auto 0;
@@ -1365,79 +1393,3 @@ iframe {
   text-align: center;
   margin-top: 60rem;
 }
-
-/* --- 01 TEXTO
-
-- Font size
-10 12 14 16 18 20 24 30 36 44 52 82 74 88 98
-
-- Font Weight
-Default: 400 500 600 700 */
-
-/* MARGIN BOTTOM */
-
-/* - noticias
-todas as noticias
-videos
-galeria de fotos
-podcast
-janela de transferencia
-
-veja tambem
-ingressos temporada 2023
-loja online
-passion20
-crn card
-
-- Ingressos
-ingressos temporada 2023
-Ingressos Partidas Masculinas
-Ingressos Partidas FEmininas
-Hospitalidade premium
-Museu 
-Estadio
-Contatos
-
-- Times
-Homem
-Mulher
-Base
-
-veja tambem
-Loja Online
-Noticias
-ingressos 2024
-
-- Temporada
-Calendario
-Posição
-
-- Clube
-História
-Locais
-O Clube
-Administração
-Parceiros
-Casa Time
-Sustentabilidade
-Trabalhe conosco
-Demonstrações Financeiras
-
-- Loja
-Loja online
-Leilão Camisas Utilizadas em Campo
-Loja Botafogo General severiano
-
-- Fans (socio)
-Mymilan
-App Oficial
-Milan TV
-Fan engagement (Cantos da Torcida , Jogador do mês, Milan Music, 
-Digital Tools
-FAQ
-
-- Academy
-
-mudar idioma
-pesquisar
- */
