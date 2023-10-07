@@ -1,3 +1,4 @@
+/* 1232 */
 @media (max-width: 77em) {
   .headeresquerda {
     width: 50%;
@@ -49,6 +50,8 @@
     height: 160rem;
   }
   .caixa,
+  .patrowbox,
+  .parceiros,
   .lojaonline h2,
   .tituloebtn,
   .loja,
@@ -140,7 +143,17 @@
   .fundob {
     display: none;
   }
-  .openm .topen .backdrop {
+  .botoes {
+    width: 90%;
+  }
+  .tabela {
+    width: 100%;
+  }
+  .proxjogo,
+  .class {
+    width: 50%;
+  }
+  .jo .openm .topen .backdrop {
     display: flex;
     position: relative;
     transform: none;
@@ -180,8 +193,11 @@
   .topen .titulochev {
     transform: rotate(180deg);
   }
-  .topen .tituloh:hover .backdrop {
-    display: none;
+
+  .topen .backdrop {
+    display: grid;
+    transform: translate(0);
+    position: relative;
   }
 
   /* .openm.scrollup .headerflex {
@@ -190,6 +206,138 @@
   .grad.openm.scrollup {
     background-image: url(../img/bannersite2.png);
   } */
+  .postimg {
+    height: 550rem;
+  }
 }
-@media (max-width: 74em) {
+/* 1040 */
+@media (max-width: 65em) {
+  .class td:last-child {
+    display: none;
+  }
+  .class th:last-child {
+    display: none;
+  }
+  .class th:nth-child(2) {
+    margin-left: -35rem;
+  }
+  .btnpartidas {
+    font-size: 12rem;
+  }
+  .escudop {
+    width: 70rem;
+    height: 93rem;
+  }
+  .titulo {
+    width: 70%;
+  }
+  .postimg {
+    height: 500rem;
+  }
+}
+/* 1000 */
+@media (max-width: 62.5em) {
+  .parceiros .patrow:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .patroimgbox:not(:first-child) {
+    margin-left: 0;
+  }
+  .titulotv {
+    width: 70%;
+  }
+}
+/* 928 */
+
+@media (max-width: 58em) {
+  .caixa {
+    flex-direction: column;
+  }
+  .sepc {
+    width: 90%;
+    height: 1px;
+  }
+  .proxjogo,
+  .class {
+    width: 100%;
+  }
+  .tituloetabela {
+    width: 100%;
+  }
+  .class td:last-child {
+    display: revert;
+  }
+  .class th:last-child {
+    display: revert;
+  }
+  .tabela td:not(:first-child, :nth-child(2)) {
+    width: 10%;
+  }
+  .tabela td::nth-child(2) {
+    width: 45%;
+    margin-right: 38rem;
+  }
+  .tabela td:first-child {
+    width: 5%;
+  }
+  .jogosclas {
+    height: 629rem;
+  }
+  .times {
+    justify-content: space-around;
+  }
+  .escudop {
+    width: 90rem;
+    height: 93rem;
+  }
+  .btnap {
+    display: none;
+  }
+  .btn a ion-icon {
+    font-size: 20rem;
+    color: #fff;
+  }
+  .btn {
+    padding: 7rem 7rem;
+    background-color: transparent;
+  }
+  .btn:hover a ion-icon {
+    color: #000;
+  }
+  .btn:hover {
+    background-color: #fff;
+  }
+  .tsvw .loja {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .tsvw .flexloja {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .tsvw .imgloja {
+    height: 550rem;
+  }
+  .tsvw .esq {
+    transform: scale(0.8);
+    z-index: 1;
+    left: -15%;
+  }
+  .tsvw .esq {
+    transform: scale(0.8);
+    z-index: 1;
+  }
+  .tsvw .dir {
+    transform: scale(0.8);
+    z-index: 1;
+    left: 65%;
+  }
+  .tsvw .cen {
+    z-index: 2;
+  }
 }

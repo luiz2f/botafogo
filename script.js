@@ -61,23 +61,13 @@ window.addEventListener(
   },
   false
 );
-// searh bar
-//
+
+// MENUMOBILE
 const xbtn = document.querySelector(".icone.icox");
 const searchbtn = document.querySelector(".icone.icons");
 const headsrch = document.querySelector(".grad");
+const menuaberto = document.querySelector(".sites");
 const inputsr = document.querySelector("#search");
-
-xbtn.addEventListener("click", () => {
-  headsrch.classList.toggle("search");
-  if (headsrch.classList.contains("search")) {
-    xbtn.name = "close-outline";
-    inputsr.focus();
-  } else {
-    xbtn.name = "search-outline";
-  }
-});
-// MENUMOBILE
 const menumobile = document.querySelector(".menuiconion");
 const mmtitles = document.querySelectorAll(".tituloh");
 
@@ -112,6 +102,23 @@ menumobile.addEventListener("click", () => {
       mmc.classList.remove("topen");
     });
     menumobile.name = "menu-outline";
+  }
+});
+
+// searh bar
+//     margin-top: 68rem;
+
+xbtn.addEventListener("click", () => {
+  headsrch.classList.toggle("search");
+  if (headsrch.classList.contains("search")) {
+    xbtn.name = "close-outline";
+    inputsr.focus();
+
+    menuaberto.style.marginTop = "68rem";
+  } else {
+    xbtn.name = "search-outline";
+    console.log("else");
+    menuaberto.style.marginTop = "0";
   }
 });
 
@@ -331,29 +338,165 @@ function prev() {
 const itens = document.querySelectorAll(".flexloja");
 const fundolojaimg = document.querySelector(".lojaonline");
 const loja = document.querySelector(".lojajs");
+const displayloja = document.querySelector(".loja");
 
 loja.addEventListener("mouseout", (event) => {
-  if (event.relatedTarget !== null && !loja.contains(event.relatedTarget)) {
-    fundolojaimg.classList.remove("tche", "adry", "edu");
+  if (dragNt.offsetWidth > 928) {
+    if (event.relatedTarget !== null && !loja.contains(event.relatedTarget)) {
+      fundolojaimg.classList.remove("tche", "adry", "edu");
+    }
   }
 });
 
 itens.forEach((item, index) => {
   item.addEventListener("mouseover", () => {
-    if (index === 0) {
-      fundolojaimg.classList.remove("adry", "edu");
-      fundolojaimg.classList.add("tche");
-    } else if (index === 1) {
-      fundolojaimg.classList.remove("tche", "edu");
+    if (dragNt.offsetWidth > 928) {
+      if (index === 0) {
+        fundolojaimg.classList.remove("adry", "edu");
+        fundolojaimg.classList.add("tche");
+      } else if (index === 1) {
+        fundolojaimg.classList.remove("tche", "edu");
 
-      fundolojaimg.classList.add("adry");
-    } else if (index === 2) {
-      fundolojaimg.classList.remove("tche", "adry");
+        fundolojaimg.classList.add("adry");
+      } else if (index === 2) {
+        fundolojaimg.classList.remove("tche", "adry");
 
-      fundolojaimg.classList.add("edu");
+        fundolojaimg.classList.add("edu");
+      }
     }
   });
 });
+////////////////////////////// LOJA MOBILE
+if (dragNt.offsetWidth < 928) {
+  fundolojaimg.classList.add("adry");
+  itens.forEach((it, i) => {
+    it.addEventListener("click", () => {
+      if (it.classList.contains("esq")) {
+        esq();
+      }
+      if (it.classList.contains("dir")) {
+        dir();
+      }
+      if (i === 0) {
+        fundolojaimg.classList.remove("adry", "edu");
+        fundolojaimg.classList.add("tche");
+      }
+      if (i === 1) {
+        fundolojaimg.classList.remove("tche", "edu");
+
+        fundolojaimg.classList.add("adry");
+      }
+      if (i === 2) {
+        fundolojaimg.classList.remove("tche", "adry");
+
+        fundolojaimg.classList.add("edu");
+      }
+    });
+  });
+  function esq() {
+    itens.forEach((bit, i) => {
+      if (bit.classList.contains("dir")) {
+        bit.classList.remove("dir");
+      }
+      if (bit.classList.contains("cen")) {
+        bit.classList.remove("cen");
+        bit.classList.add("dir");
+      }
+      if (bit.classList.contains("esq")) {
+        bit.classList.remove("esq");
+        bit.classList.add("cen");
+      }
+      if (!bit.classList.contains("dir") && !bit.classList.contains("cen")) {
+        bit.classList.add("esq");
+      }
+    });
+  }
+  function dir() {
+    itens.forEach((bit, i) => {
+      if (bit.classList.contains("esq")) {
+        bit.classList.remove("esq");
+      }
+      if (bit.classList.contains("cen")) {
+        bit.classList.remove("cen");
+        bit.classList.add("esq");
+      }
+      if (bit.classList.contains("dir")) {
+        bit.classList.remove("dir");
+        bit.classList.add("cen");
+      }
+      if (!bit.classList.contains("esq") && !bit.classList.contains("cen")) {
+        bit.classList.add("dir");
+      }
+    });
+  }
+}
+// if (dragNt.offsetWidth < 928) {
+//   fundolojaimg.classList.add("adry");
+//   itens.forEach((it, i) => {
+//     it.addEventListener("click", () => {
+//       if (i == 0 && it.classList.contains("esq")) {
+//         itens[0].classList.add("cen");
+//         itens[0].classList.remove("esq");
+//         itens[1].classList.add("dir");
+//         itens[1].classList.remove("cen");
+//         itens[2].classList.add("esq");
+//         itens[2].classList.remove("dir");
+//         fundolojaimg.classList.remove("adry", "edu");
+//         fundolojaimg.classList.add("tche");
+//       }
+//       if (i == 1 && it.classList.contains("esq")) {
+//         itens[1].classList.add("cen");
+//         itens[1].classList.remove("esq");
+//         itens[2].classList.add("dir");
+//         itens[2].classList.remove("cen");
+//         itens[0].classList.add("esq");
+//         itens[0].classList.remove("dir");
+//         fundolojaimg.classList.remove("tche", "edu");
+//         fundolojaimg.classList.add("adry");
+//       }
+//       if (i == 2 && it.classList.contains("esq")) {
+//         itens[2].classList.add("cen");
+//         itens[2].classList.remove("esq");
+//         itens[0].classList.add("dir");
+//         itens[0].classList.remove("cen");
+//         itens[1].classList.add("esq");
+//         itens[1].classList.remove("dir");
+//         fundolojaimg.classList.remove("tche", "adry");
+//         fundolojaimg.classList.add("edu");
+//       }
+//       if (i == 0 && it.classList.contains("dir")) {
+//         itens[0].classList.add("cen");
+//         itens[0].classList.remove("dir");
+//         itens[1].classList.add("dir");
+//         itens[1].classList.remove("esq");
+//         itens[2].classList.add("esq");
+//         itens[2].classList.remove("cen");
+//         fundolojaimg.classList.remove("adry", "edu");
+//         fundolojaimg.classList.add("tche");
+//       }
+//       if (i == 1 && it.classList.contains("dir")) {
+//         itens[1].classList.add("cen");
+//         itens[1].classList.remove("dir");
+//         itens[2].classList.add("dir");
+//         itens[2].classList.remove("esq");
+//         itens[0].classList.add("esq");
+//         itens[0].classList.remove("cen");
+//         fundolojaimg.classList.remove("tche", "edu");
+//         fundolojaimg.classList.add("adry");
+//       }
+//       if (i == 2 && it.classList.contains("dir")) {
+//         itens[2].classList.add("cen");
+//         itens[2].classList.remove("dir");
+//         itens[0].classList.add("dir");
+//         itens[0].classList.remove("esq");
+//         itens[1].classList.add("esq");
+//         itens[1].classList.remove("cen");
+//         fundolojaimg.classList.remove("tche", "adry");
+//         fundolojaimg.classList.add("edu");
+//       }
+//     });
+//   });
+// }
 
 ////////////////////////////// BOTAFOGO TV
 
