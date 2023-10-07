@@ -383,46 +383,52 @@ if (dragNt.offsetWidth < 928) {
       }
       if (i === 1) {
         fundolojaimg.classList.remove("tche", "edu");
-
         fundolojaimg.classList.add("adry");
       }
       if (i === 2) {
         fundolojaimg.classList.remove("tche", "adry");
-
         fundolojaimg.classList.add("edu");
       }
     });
   });
+
   function esq() {
     itens.forEach((bit, i) => {
       if (bit.classList.contains("dir")) {
         bit.classList.remove("dir");
+        bit.style.zIndex = "0";
       }
       if (bit.classList.contains("cen")) {
         bit.classList.remove("cen");
         bit.classList.add("dir");
+        bit.style.zIndex = "1";
       }
       if (bit.classList.contains("esq")) {
         bit.classList.remove("esq");
         bit.classList.add("cen");
+        bit.style.zIndex = "2";
       }
       if (!bit.classList.contains("dir") && !bit.classList.contains("cen")) {
         bit.classList.add("esq");
       }
     });
   }
+
   function dir() {
     itens.forEach((bit, i) => {
       if (bit.classList.contains("esq")) {
         bit.classList.remove("esq");
+        bit.style.zIndex = "0";
       }
       if (bit.classList.contains("cen")) {
         bit.classList.remove("cen");
         bit.classList.add("esq");
+        bit.style.zIndex = "1";
       }
       if (bit.classList.contains("dir")) {
         bit.classList.remove("dir");
         bit.classList.add("cen");
+        bit.style.zIndex = "2";
       }
       if (!bit.classList.contains("esq") && !bit.classList.contains("cen")) {
         bit.classList.add("dir");
@@ -430,73 +436,8 @@ if (dragNt.offsetWidth < 928) {
     });
   }
 }
-// if (dragNt.offsetWidth < 928) {
-//   fundolojaimg.classList.add("adry");
-//   itens.forEach((it, i) => {
-//     it.addEventListener("click", () => {
-//       if (i == 0 && it.classList.contains("esq")) {
-//         itens[0].classList.add("cen");
-//         itens[0].classList.remove("esq");
-//         itens[1].classList.add("dir");
-//         itens[1].classList.remove("cen");
-//         itens[2].classList.add("esq");
-//         itens[2].classList.remove("dir");
-//         fundolojaimg.classList.remove("adry", "edu");
-//         fundolojaimg.classList.add("tche");
-//       }
-//       if (i == 1 && it.classList.contains("esq")) {
-//         itens[1].classList.add("cen");
-//         itens[1].classList.remove("esq");
-//         itens[2].classList.add("dir");
-//         itens[2].classList.remove("cen");
-//         itens[0].classList.add("esq");
-//         itens[0].classList.remove("dir");
-//         fundolojaimg.classList.remove("tche", "edu");
-//         fundolojaimg.classList.add("adry");
-//       }
-//       if (i == 2 && it.classList.contains("esq")) {
-//         itens[2].classList.add("cen");
-//         itens[2].classList.remove("esq");
-//         itens[0].classList.add("dir");
-//         itens[0].classList.remove("cen");
-//         itens[1].classList.add("esq");
-//         itens[1].classList.remove("dir");
-//         fundolojaimg.classList.remove("tche", "adry");
-//         fundolojaimg.classList.add("edu");
-//       }
-//       if (i == 0 && it.classList.contains("dir")) {
-//         itens[0].classList.add("cen");
-//         itens[0].classList.remove("dir");
-//         itens[1].classList.add("dir");
-//         itens[1].classList.remove("esq");
-//         itens[2].classList.add("esq");
-//         itens[2].classList.remove("cen");
-//         fundolojaimg.classList.remove("adry", "edu");
-//         fundolojaimg.classList.add("tche");
-//       }
-//       if (i == 1 && it.classList.contains("dir")) {
-//         itens[1].classList.add("cen");
-//         itens[1].classList.remove("dir");
-//         itens[2].classList.add("dir");
-//         itens[2].classList.remove("esq");
-//         itens[0].classList.add("esq");
-//         itens[0].classList.remove("cen");
-//         fundolojaimg.classList.remove("tche", "edu");
-//         fundolojaimg.classList.add("adry");
-//       }
-//       if (i == 2 && it.classList.contains("dir")) {
-//         itens[2].classList.add("cen");
-//         itens[2].classList.remove("dir");
-//         itens[0].classList.add("dir");
-//         itens[0].classList.remove("esq");
-//         itens[1].classList.add("esq");
-//         itens[1].classList.remove("cen");
-//         fundolojaimg.classList.remove("tche", "adry");
-//         fundolojaimg.classList.add("edu");
-//       }
-//     });
-//   });
-// }
+
+// adicionar check de event pra largura da janela
 
 ////////////////////////////// BOTAFOGO TV
 

@@ -327,17 +327,19 @@
     transform: scale(0.8);
     z-index: 1;
     left: -15%;
-  }
-  .tsvw .esq {
-    transform: scale(0.8);
-    z-index: 1;
+    transition-property: transform, scale, left;
+    transition-duration: 0.5s;
   }
   .tsvw .dir {
     transform: scale(0.8);
     z-index: 1;
     left: 65%;
+    transition-property: transform, scale, left;
+    transition-duration: 0.5s;
   }
   .tsvw .cen {
     z-index: 2;
+    transition-property: transform, scale, left;
+    transition-duration: 0.5s;
   }
 }
