@@ -15,6 +15,7 @@
 //
 
 ///////////////////////////// MENU: STICKY / HIDE
+const body = document.querySelector("body");
 const menu = document.querySelector(".grad");
 const banner = document.querySelector(".menuhid");
 let isIntersecting = false;
@@ -23,13 +24,13 @@ const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
 
-    if (ent.isIntersecting === false) {
+    if (ent.isIntersecting === false && !menu.classList.contains("openm")) {
       menu.classList.add("hide");
       menu.classList.add("scrollup");
       isIntersecting = false;
     }
 
-    if (ent.isIntersecting === true) {
+    if (ent.isIntersecting === true && !menu.classList.contains("openm")) {
       menu.classList.remove("scrollup");
       menu.classList.remove("hide");
       isIntersecting = true;
@@ -49,7 +50,7 @@ window.addEventListener(
   "scroll",
   function () {
     var st = window.scrollY || document.documentElement.scrollTop;
-    if (!isIntersecting) {
+    if (!isIntersecting && !menu.classList.contains("openm")) {
       if (st > lastScrollTop) {
         menu.classList.add("hide");
       } else {
@@ -95,11 +96,13 @@ mmtitles.forEach(function (mmt) {
 menumobile.addEventListener("click", () => {
   menu.classList.toggle("openm");
   if (headsrch.classList.contains("openm")) {
+    body.style.overflowY = "hidden";
     menumobile.name = "close-outline";
     inputsr.focus();
   } else {
     mmtitles.forEach(function (mmc) {
       mmc.classList.remove("topen");
+      body.style.overflowY = "auto";
     });
     menumobile.name = "menu-outline";
   }
@@ -113,12 +116,9 @@ xbtn.addEventListener("click", () => {
   if (headsrch.classList.contains("search")) {
     xbtn.name = "close-outline";
     inputsr.focus();
-
-    menuaberto.style.marginTop = "68rem";
   } else {
     xbtn.name = "search-outline";
     console.log("else");
-    menuaberto.style.marginTop = "0";
   }
 });
 
@@ -269,7 +269,7 @@ dragNt.addEventListener("touchcancel", () => {
   // dragNt.classList.remove("dragatv");
   // walkperc = 0;
 });
-dragNt.addEventListener("toutchend", () => {
+dragNt.addEventListener("touchend", () => {
   console.log("end");
 
   // if (walkperc < -3) {
@@ -300,7 +300,7 @@ dragNt.addEventListener("touchmove", (e) => {
 
 ///////////////////////////// PARTIDAS Carrosel
 
-let atual = 1;
+let atual = 2;
 const rollPt = document.querySelector(".rollpartidas");
 const todosPt = document.querySelectorAll(".partida");
 const prevBtnPt = document.querySelector(".jgant");
@@ -367,7 +367,20 @@ itens.forEach((item, index) => {
   });
 });
 ////////////////////////////// LOJA MOBILE
+window.addEventListener("resize", (e) => {
+  const larguraDaJanela = window.innerWidth;
+  if (larguraDaJanela < 928) {
+    lojamobile();
+  }
+  if (larguraDaJanela > 928) {
+    fundolojaimg.classList.remove("tche", "adry", "edu");
+  }
+});
+
 if (dragNt.offsetWidth < 928) {
+  lojamobile();
+}
+function lojamobile() {
   fundolojaimg.classList.add("adry");
   itens.forEach((it, i) => {
     it.addEventListener("click", () => {
@@ -391,50 +404,50 @@ if (dragNt.offsetWidth < 928) {
       }
     });
   });
+}
 
-  function esq() {
-    itens.forEach((bit, i) => {
-      if (bit.classList.contains("dir")) {
-        bit.classList.remove("dir");
-        bit.style.zIndex = "0";
-      }
-      if (bit.classList.contains("cen")) {
-        bit.classList.remove("cen");
-        bit.classList.add("dir");
-        bit.style.zIndex = "1";
-      }
-      if (bit.classList.contains("esq")) {
-        bit.classList.remove("esq");
-        bit.classList.add("cen");
-        bit.style.zIndex = "2";
-      }
-      if (!bit.classList.contains("dir") && !bit.classList.contains("cen")) {
-        bit.classList.add("esq");
-      }
-    });
-  }
+function esq() {
+  itens.forEach((bit, i) => {
+    if (bit.classList.contains("dir")) {
+      bit.classList.remove("dir");
+      bit.style.zIndex = "0";
+    }
+    if (bit.classList.contains("cen")) {
+      bit.classList.remove("cen");
+      bit.classList.add("dir");
+      bit.style.zIndex = "1";
+    }
+    if (bit.classList.contains("esq")) {
+      bit.classList.remove("esq");
+      bit.classList.add("cen");
+      bit.style.zIndex = "2";
+    }
+    if (!bit.classList.contains("dir") && !bit.classList.contains("cen")) {
+      bit.classList.add("esq");
+    }
+  });
+}
 
-  function dir() {
-    itens.forEach((bit, i) => {
-      if (bit.classList.contains("esq")) {
-        bit.classList.remove("esq");
-        bit.style.zIndex = "0";
-      }
-      if (bit.classList.contains("cen")) {
-        bit.classList.remove("cen");
-        bit.classList.add("esq");
-        bit.style.zIndex = "1";
-      }
-      if (bit.classList.contains("dir")) {
-        bit.classList.remove("dir");
-        bit.classList.add("cen");
-        bit.style.zIndex = "2";
-      }
-      if (!bit.classList.contains("esq") && !bit.classList.contains("cen")) {
-        bit.classList.add("dir");
-      }
-    });
-  }
+function dir() {
+  itens.forEach((bit, i) => {
+    if (bit.classList.contains("esq")) {
+      bit.classList.remove("esq");
+      bit.style.zIndex = "0";
+    }
+    if (bit.classList.contains("cen")) {
+      bit.classList.remove("cen");
+      bit.classList.add("esq");
+      bit.style.zIndex = "1";
+    }
+    if (bit.classList.contains("dir")) {
+      bit.classList.remove("dir");
+      bit.classList.add("cen");
+      bit.style.zIndex = "2";
+    }
+    if (!bit.classList.contains("esq") && !bit.classList.contains("cen")) {
+      bit.classList.add("dir");
+    }
+  });
 }
 
 // adicionar check de event pra largura da janela

@@ -122,17 +122,19 @@ header {
 }
 .escdiv {
   height: 199rem;
-  width: 177rem;
+  /* width: 177rem; */
   display: flex;
   align-content: center;
   flex-wrap: wrap;
   justify-content: space-around;
+  pointer-events: none;
 }
 .escudo {
   height: 187px;
   margin: 6px;
   position: relative;
   z-index: 2;
+  pointer-events: none;
 }
 
 .headeresquerda {
@@ -213,18 +215,21 @@ header {
   padding-bottom: 4rem;
   border-bottom: 1px solid #ddd;
 }
-.subt:hover,
-.subt:active {
-  color: #000;
-  border-bottom: 1px solid #555;
+.subt.pr {
+  border-bottom: 1px solid transparent;
+  cursor: default;
 }
 .titulochev {
   display: none;
 }
+.subt.pr:link,
+.subt.pr:visited {
+  border-bottom: 1px solid transparent;
+}
 .subt.pr:hover,
 .subt.pr:active {
   color: #000;
-  border-bottom: none;
+  border-bottom: 1px solid transparent;
 }
 .grad:not(.openm) .tituloh:hover .backdrop {
   background-color: #fff;
@@ -343,8 +348,14 @@ a .iconeentrar {
 .search .searchwidth {
   width: 1050rem;
   margin: 0 auto;
+  pointer-events: inherit;
 }
+.searchwidth {
+  pointer-events: none;
+}
+
 #search {
+  transform: translateX(500px);
   opacity: 0;
   transition: all 0;
   font-family: "inter", sans-serif;
@@ -360,6 +371,7 @@ a .iconeentrar {
   display: block;
   opacity: 1;
   transition: all 0.2s;
+  transform: translateX(0);
 }
 #search::placeholder {
   color: #b4b4b4;
@@ -455,7 +467,6 @@ a .iconeentrar {
 .scrollup .borda {
   width: 30%;
   top: 70px;
-  left: 90px;
 }
 
 .grad.hide {
@@ -514,7 +525,8 @@ BANNER
     180deg,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.9) 100%
+    rgba(0, 0, 0, 0.7) 75%,
+    rgba(0, 0, 0, 1) 100%
   );
   z-index: 1;
 }
@@ -563,10 +575,11 @@ BANNER
   transition: all 0.3s;
   border: 2px solid transparent;
   z-index: 8;
-
-  /* box-shadow: 0px 0px 5px 8px #000; */
-  /* box-shadow: 6px 6px 10px 0 #00000033; */
 }
+.titulo .btnmateria {
+  display: none;
+}
+
 .btnmateria:hover {
   color: #fff;
   background-color: #000;
@@ -593,6 +606,7 @@ BANNER
   align-items: center;
   top: 40%;
   width: 100%;
+  height: 0;
 }
 
 .botoes {
@@ -609,24 +623,25 @@ BANNER
   cursor: pointer;
 }
 .iconnav {
+  cursor: pointer;
   color: #fff;
   padding: 8rem;
   width: 24rem;
   height: 24rem;
   align-self: center;
   z-index: 3;
+  background-color: #0000004f;
+  border-radius: 50%;
 }
 
 .iconeant,
 .iconedps {
   display: flex;
   align-items: center;
-  background-color: #0000004f;
   border-radius: 50%;
   z-index: 3;
 }
-.iconeant:hover,
-.iconedps:hover {
+.iconnav:hover {
   background-color: #000000a2;
 }
 
@@ -705,7 +720,7 @@ BANNER
 .rollpartidas {
   display: flex;
   transition: transform 0.2s;
-  transform: translateX(calc(-100% - 48rem));
+  transform: translateX(calc(-200% - 96rem));
 }
 .partida {
   flex-shrink: 0;
@@ -721,7 +736,6 @@ BANNER
 }
 
 .campeonato {
-  margin-top: -4rem;
   font-size: 14rem;
   letter-spacing: 1.2px;
   color: #505050;
@@ -958,6 +972,8 @@ tbody:before {
   background-image: url(../img/loja/efeitos/teste1.png);
   background-size: cover;
   transition: background 0.8s;
+  width: 100%;
+  overflow: hidden;
 }
 
 .lojaonline.tche {
@@ -1312,7 +1328,7 @@ iframe {
 }
 
 .maptitle {
-  color: #fff;
+  color: #e1e1e1;
   font-size: 20rem;
   margin-bottom: 38rem;
   display: flex;
@@ -1324,7 +1340,6 @@ iframe {
   display: grid;
   grid-template-columns: repeat(4, 190rem);
   row-gap: 54rem;
-  padding-left: rem;
 }
 .boxitems {
   display: grid;
@@ -1333,7 +1348,7 @@ iframe {
 .boxitems a:link,
 .boxitems a:visited {
   text-decoration: none;
-  color: #696969;
+  color: #b6b6b6;
   font-size: 16rem;
   transition: 0.2s all;
   font-family: "Inter", sans-serif;
@@ -1341,7 +1356,7 @@ iframe {
 .boxitems a:hover,
 .boxitems a:active {
   text-decoration: none;
-  color: #b8b8b8;
+  color: #fff;
   font-size: 16rem;
 }
 
