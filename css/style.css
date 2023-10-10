@@ -5,13 +5,11 @@
 }
 html {
   /* 10/16 = 0,625 */
-  font-size: 6.25%;
   scroll-behavior: smooth;
 }
 body {
   font-family: "freewill", "Russo One", sans-serif;
   overflow-x: hidden;
-  font-size: 18rem;
 }
 a {
   text-decoration: none;
@@ -30,7 +28,7 @@ header {
     rgba(0, 0, 0, 0.25) 75%
   );
 
-  height: 180rem;
+  height: 180px;
   display: flex;
   flex-direction: column;
   z-index: -3;
@@ -48,11 +46,13 @@ header {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 200rem;
-  width: 1222rem;
-  margin: 0 auto;
-  padding-top: 30rem;
-  padding-bottom: 18rem;
+  height: 200px;
+  width: 1222px;
+  margin: auto;
+  /* padding-top: 30px;
+  padding-bottom: 18px; */
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .topheader {
@@ -65,12 +65,12 @@ header {
 }
 
 .patrocinio {
-  height: 60rem;
+  height: 60px;
   cursor: pointer;
 }
 .iconerede {
-  height: 20rem;
-  width: 20rem;
+  height: 20px;
+  width: 20px;
   color: #cecece;
   transition: all 0.2s ease-in;
 }
@@ -79,19 +79,19 @@ header {
   transform: translateY(-3px);
 }
 .redessociais a:not(:last-child) {
-  margin-right: 12rem;
+  margin-right: 12px;
 }
 .sephed {
   width: 2px;
-  height: 48rem;
+  height: 48px;
   background: linear-gradient(
     rgba(138, 138, 138, 0) 01%,
     #8a8a8a 50%,
     rgba(138, 138, 138, 0) 100%
   );
-  margin: 0 28rem;
+  margin: 0 28px;
   align-self: center;
-  margin-left: 32rem;
+  margin-left: 32px;
 }
 .bottomheader {
   display: flex;
@@ -101,7 +101,7 @@ header {
 .acoes {
   display: flex;
   align-items: center;
-  align-self: self-end;
+
   justify-self: flex-end;
 }
 .glorioso {
@@ -121,8 +121,8 @@ header {
   z-index: 1;
 }
 .escdiv {
-  height: 199rem;
-  /* width: 177rem; */
+  height: 199px;
+  /* width: 177px; */
   display: flex;
   align-content: center;
   flex-wrap: wrap;
@@ -152,22 +152,22 @@ header {
 }
 .menuiconion {
   display: flex;
-  height: 36rem;
-  width: 36rem;
-  padding: 3rem 4rem;
+  height: 36px;
+  width: 36px;
+  padding: 3px 4px;
   align-items: center;
-  --ionicon-stroke-width: 55rem;
+  --ionicon-stroke-width: 55px;
 }
 
 .sites {
   display: flex;
   align-self: self-end;
-  margin-left: 18rem;
+  margin-left: 18px;
 }
 .flexopenmenu {
   color: #fff;
   text-decoration: none;
-  font-size: 19rem;
+  font-size: 19px;
   text-transform: uppercase;
   letter-spacing: 1.1px;
   border-bottom: 4px solid transparent;
@@ -178,7 +178,7 @@ header {
 .princi:visited {
   color: #fff;
   text-decoration: none;
-  font-size: 19rem;
+  font-size: 19px;
   text-transform: uppercase;
   letter-spacing: 1.1px;
   transition: all 0.1s;
@@ -194,25 +194,25 @@ header {
 }
 .tituloh {
   cursor: pointer;
-  padding-bottom: 31rem;
-  margin-bottom: -31rem;
+  padding-bottom: 31px;
+  margin-bottom: -31px;
 }
 .tituloh:not(:last-child) {
-  padding-right: 7rem;
+  padding-right: 7px;
 }
 .tituloh:not(:first-child) {
-  padding-left: 7rem;
+  padding-left: 7px;
 }
 .subt:link,
 .subt:visited {
   font-family: "Inter", sans-serif;
   color: #555;
   text-decoration: none;
-  font-size: 16rem;
+  font-size: 16px;
   letter-spacing: 1.1px;
   transition: all 0.1s;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-top: 2px;
+  padding-bottom: 4px;
   border-bottom: 1px solid #ddd;
 }
 .subt.pr {
@@ -247,21 +247,21 @@ header {
 }
 
 .backdrop {
-  padding: 24rem 32rem;
+  padding: 24px 32px;
   position: absolute;
   background-color: #fff;
   bottom: 0px;
-  transform: translate(-32rem, 100%);
+  transform: translate(-32px, 100%);
   z-index: 1;
   display: none;
   opacity: 0.95;
 }
 .fundob {
-  row-gap: 12rem;
+  row-gap: 12px;
   display: none;
 }
 .fundob:not(:first-child) {
-  margin-left: 64rem;
+  margin-left: 64px;
 }
 
 /* /// CLUBE//// */
@@ -285,8 +285,8 @@ header {
   color: #fff;
 }
 .btn {
-  font-size: 12rem;
-  padding: 9rem 18rem;
+  font-size: 12px;
+  padding: 9px 18px;
   background-color: #fff;
   letter-spacing: 3.2px;
   display: flex;
@@ -300,26 +300,26 @@ header {
   display: flex;
 }
 .btnap {
-  margin-left: 20rem;
+  margin-left: 20px;
 }
 .btn:hover {
   background-color: #2c2c2c;
   border: 2px solid #fff;
 }
 a .iconeentrar {
-  --ionicon-stroke-width: 55rem;
+  --ionicon-stroke-width: 55px;
   align-self: center;
-  width: 20rem;
+  width: 20px;
 }
 .icone {
   cursor: pointer;
-  padding: 9rem 12rem;
-  width: 20rem;
-  height: 20rem;
+  padding: 9px 12px;
+  width: 20px;
+  height: 20px;
   align-self: center;
 
   color: #fff;
-  --ionicon-stroke-width: 55rem;
+  --ionicon-stroke-width: 55px;
   transition: all 0.3s;
 }
 .icone:hover {
@@ -343,10 +343,10 @@ a .iconeentrar {
   background-repeat: no-repeat;
 }
 .search .searchbar {
-  height: 54rem;
+  height: 54px;
 }
 .search .searchwidth {
-  width: 1050rem;
+  width: 1050px;
   margin: 0 auto;
   pointer-events: inherit;
 }
@@ -361,10 +361,10 @@ a .iconeentrar {
   font-family: "inter", sans-serif;
   width: 100%;
   background-color: #0000;
-  margin-left: 100rem;
-  height: 48rem;
+  margin-left: 100px;
+  height: 48px;
   border: none;
-  font-size: 20rem;
+  font-size: 20px;
   color: #555;
 }
 .search #search {
@@ -381,11 +381,11 @@ a .iconeentrar {
   outline: none;
 }
 .search .bottomheader {
-  margin-top: -55rem;
+  margin-top: -55px;
 }
 .search .caixasd {
-  height: 115rem;
-  margin-bottom: -78rem;
+  height: 115px;
+  margin-bottom: -78px;
   display: flex;
   flex-direction: column;
 
@@ -400,11 +400,11 @@ a .iconeentrar {
   display: block;
 }
 .search .caixasd .icone:nth-child(2) {
-  margin-bottom: 10rem;
+  margin-bottom: 10px;
 }
 .caixasd {
-  margin-left: 24rem;
-  height: 37rem;
+  margin-left: 24px;
+  height: 37px;
   transition: none;
   transition: all 0.2s;
   z-index: 2;
@@ -454,7 +454,7 @@ a .iconeentrar {
   transform: translateY(-50%);
 }
 .scrollup .sites {
-  padding-right: 7rem;
+  padding-right: 7px;
 }
 .scrollup .glorioso {
   top: -85px;
@@ -476,7 +476,7 @@ a .iconeentrar {
   transform: translate(0, -100%);
 }
 .hide.search .caixasd {
-  margin-bottom: -72rem;
+  margin-bottom: -72px;
 }
 .search .headerflex {
   box-shadow: none;
@@ -504,7 +504,7 @@ BANNER
   transition: transform 0.3s;
 }
 .postimg {
-  height: 650rem;
+  height: 650px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -534,22 +534,22 @@ BANNER
 /* TITULO E BOTAO */
 .titulo {
   color: #fff;
-  font-size: 18rem;
+  font-size: 18px;
   cursor: pointer;
   width: 80%;
 }
 .titulo h4 {
-  font-size: 14rem;
+  font-size: 14px;
   letter-spacing: 10px;
   text-transform: uppercase;
-  margin-bottom: -5rem;
+  margin-bottom: -5px;
   color: #ccc;
 }
 .titulo h1 {
-  font-size: 50rem;
-  letter-spacing: 5rem;
+  font-size: 50px;
+  letter-spacing: 5px;
   text-transform: uppercase;
-  margin-bottom: 8rem;
+  margin-bottom: 8px;
 }
 .titulo p {
   font-family: "Inter", sans-serif;
@@ -561,15 +561,15 @@ BANNER
   justify-content: space-between;
   align-items: flex-end;
   flex-grow: 0;
-  width: 1050rem;
-  padding-bottom: 80rem;
+  width: 1050px;
+  padding-bottom: 80px;
   user-select: none;
 }
 .btnmateria {
   width: fit-content;
   height: fit-content;
   flex-grow: 0;
-  padding: 12rem 24rem;
+  padding: 12px 24px;
   background-color: #fff;
   cursor: pointer;
   transition: all 0.3s;
@@ -591,7 +591,7 @@ BANNER
 .iconeant,
 .iconedps {
   /* cursor: pointer; 
-    top: 250rem;*/
+    top: 250px;*/
 
   z-index: 5;
   /* border: 1px solid #000;
@@ -615,7 +615,7 @@ BANNER
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 1050rem;
+  width: 1050px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -625,9 +625,9 @@ BANNER
 .iconnav {
   cursor: pointer;
   color: #fff;
-  padding: 8rem;
-  width: 24rem;
-  height: 24rem;
+  padding: 8px;
+  width: 24px;
+  height: 24px;
   align-self: center;
   z-index: 3;
   background-color: #0000004f;
@@ -650,7 +650,7 @@ BANNER
 .carrosel {
   display: flex;
   justify-content: center;
-  transform: translateY(-55rem);
+  transform: translateY(-55px);
 }
 .bola {
   width: 10px;
@@ -667,7 +667,7 @@ BANNER
 }
 
 .menuhid {
-  height: 180rem;
+  height: 180px;
   background-color: #f2f2f2;
 }
 
@@ -676,7 +676,7 @@ BANNER
 /* ////////////////////////// */
 
 .jogosclas {
-  height: 320rem;
+  height: 320px;
   background-color: #f2f2f2;
   display: flex;
   justify-content: space-around;
@@ -684,7 +684,7 @@ BANNER
 }
 
 .caixa {
-  width: 1050rem;
+  width: 1050px;
 
   top: -30px;
   z-index: 10;
@@ -702,10 +702,10 @@ BANNER
 .proxjogo,
 .class {
   display: flex;
-  width: 525rem;
+  width: 525px;
   align-items: center;
-  padding: 28rem 56rem;
-  padding-top: 28rem;
+  padding: 28px 56px;
+  padding-top: 28px;
   justify-content: space-between;
   flex-direction: column;
 }
@@ -720,29 +720,29 @@ BANNER
 .rollpartidas {
   display: flex;
   transition: transform 0.2s;
-  transform: translateX(calc(-200% - 96rem));
+  transform: translateX(calc(-200% - 96px));
 }
 .partida {
   flex-shrink: 0;
   width: 100%;
-  margin-right: 48rem;
+  margin-right: 48px;
 }
 
 .info h3 {
   user-select: none;
-  font-size: 36rem;
+  font-size: 36px;
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
 
 .campeonato {
-  font-size: 14rem;
+  font-size: 14px;
   letter-spacing: 1.2px;
   color: #505050;
 }
 .rodada {
-  font-size: 12rem;
-  margin-top: rem;
+  font-size: 12px;
+  margin-top: px;
   letter-spacing: 1.2px;
   color: #505050;
   font-family: "Inter", sans-serif;
@@ -751,18 +751,18 @@ BANNER
 .datapartida {
   font-family: "Inter", sans-serif;
 
-  font-size: 14rem;
+  font-size: 14px;
   margin-top: 0;
   color: #757575;
 }
 .timemandante {
-  width: 58rem;
+  width: 58px;
 }
 .btnpartidas {
   background-color: #000;
   color: #fff;
-  font-size: 16rem;
-  padding: 8rem 16rem;
+  font-size: 16px;
+  padding: 8px 16px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s;
@@ -770,7 +770,7 @@ BANNER
   user-select: none;
 }
 .past .vs {
-  font-size: 38rem;
+  font-size: 38px;
   letter-spacing: 8px;
 }
 .past .btnpartidas {
@@ -806,13 +806,13 @@ BANNER
   height: 65%;
   display: flex;
   align-items: end;
-  font-size: 24rem;
-  margin-bottom: 24rem;
+  font-size: 24px;
+  margin-bottom: 24px;
   letter-spacing: -1px;
 }
 .escudop {
-  width: 100rem;
-  height: 115rem;
+  width: 100px;
+  height: 115px;
   display: flex;
 }
 .mandante {
@@ -848,22 +848,22 @@ BANNER
 .btndv div {
   cursor: pointer;
   color: #777;
-  height: 25rem;
-  padding: 3rem;
+  height: 25px;
+  padding: 3px;
 }
 .btndv div:hover {
   color: #555;
 }
 
 .vejamaispartidas {
-  margin-top: 24rem;
+  margin-top: 24px;
   user-select: none;
 }
 .vejamaispartidas a:link,
 .vejamaispartidas a:visited {
-  font-size: 14rem;
+  font-size: 14px;
   color: #555;
-  margin-top: 24rem;
+  margin-top: 24px;
   border-bottom: 1px solid transparent;
 
   transition: 0.3s all;
@@ -876,17 +876,17 @@ BANNER
   border-bottom: 1px solid #555;
 }
 .times p {
-  font-size: 14rem;
-  margin-top: 12rem;
+  font-size: 14px;
+  margin-top: 12px;
 }
 .sepc {
   width: 1px;
   background-color: #d9d9d9;
-  height: 250rem;
+  height: 250px;
   margin: auto;
 }
 .tabela {
-  width: 412.5rem;
+  width: 412.5px;
   font-family: "Inter", sans-serif;
   color: #222;
 }
@@ -912,27 +912,27 @@ BANNER
 .tabela table tbody tr td img {
   width: 25px;
   height: 25px;
-  margin-right: 14rem;
-  margin-left: 6rem;
+  margin-right: 14px;
+  margin-left: 6px;
 }
 .timestab {
   display: flex;
   align-items: center;
-  margin-right: 38rem;
-  font-size: 16rem;
+  margin-right: 38px;
+  font-size: 16px;
 }
 .timestab img {
   align-self: center;
 }
 .tabela th:not(:nth-child(2)) {
-  width: 48rem;
+  width: 48px;
   text-align: center;
-  font-size: 16rem;
+  font-size: 16px;
 }
 .tabela th:nth-child(2) {
   text-align: justify;
-  font-size: 18rem;
-  margin-left: -45rem;
+  font-size: 18px;
+  margin-left: -45px;
   position: absolute;
 }
 .tabela tr:nth-child(1) {
@@ -940,10 +940,10 @@ BANNER
 }
 
 .tabela {
-  margin-top: 18rem;
+  margin-top: 18px;
 }
 .tabela table tbody tr {
-  height: 40rem;
+  height: 40px;
 }
 table {
   border-collapse: collapse;
@@ -953,7 +953,7 @@ table {
   /* background-color: red; */
 }
 tbody:before {
-  line-height: 10rem;
+  line-height: 10px;
   content: "\200C";
   display: block;
 }
@@ -968,7 +968,7 @@ tbody:before {
 /* ////////////////////////////////////////// */
 .lojaonline {
   background-color: #f2f2f2;
-  padding-bottom: 96rem;
+  padding-bottom: 96px;
   background-image: url(../img/loja/efeitos/teste1.png);
   background-size: cover;
   transition: background 0.8s;
@@ -996,34 +996,34 @@ tbody:before {
 .adry .lojatitulo h2 {
   color: #fff;
   background-color: #222222;
-  padding-left: 12rem;
+  padding-left: 12px;
 }
 .edu .lojatitulo h2 {
   color: #fff;
-  padding-left: 12rem;
+  padding-left: 12px;
 }
 
 .lojatitulo {
-  padding-top: 96rem;
-  margin-bottom: 48rem;
+  padding-top: 96px;
+  margin-bottom: 48px;
 }
 .lojaonline h2 {
-  font-size: 40rem;
+  font-size: 40px;
   text-transform: uppercase;
   /* text-align: center; */
   letter-spacing: 5px;
   margin: 0 auto;
-  width: 1050rem;
+  width: 1050px;
   transition: all 0.3s;
 }
 
 .loja {
   display: grid;
   margin: 0 auto;
-  width: 1050rem;
-  height: 580rem;
+  width: 1050px;
+  height: 580px;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 48rem;
+  column-gap: 48px;
 }
 .flexloja {
   display: flex;
@@ -1067,10 +1067,10 @@ tbody:before {
 }
 
 .btncompre {
-  font-size: 20rem;
+  font-size: 20px;
   color: #fff;
   background-color: #000;
-  height: 48rem;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1087,21 +1087,21 @@ tbody:before {
 
 .botafogotv {
   background-color: #f2f2f2;
-  padding-bottom: 160rem;
-  padding-top: 96rem;
+  padding-bottom: 160px;
+  padding-top: 96px;
 }
 .tv {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 64rem;
-  width: 1050rem;
+  padding: 64px;
+  width: 1050px;
   background-color: #000;
 }
 .logotv {
   display: flex;
-  height: 60rem;
+  height: 60px;
   align-items: center;
   justify-content: space-around;
 }
@@ -1110,16 +1110,16 @@ tbody:before {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 48rem;
-  margin-bottom: 20rem;
+  margin-top: 48px;
+  margin-bottom: 20px;
 }
 .titulotv {
-  font-size: 36rem;
+  font-size: 36px;
   color: #ffffff;
 }
 .btntv {
-  font-size: 16rem;
-  padding: 9rem 18rem;
+  font-size: 16px;
+  padding: 9px 18px;
   background-color: #fff;
   cursor: pointer;
   transition: all 0.3s;
@@ -1141,7 +1141,7 @@ tbody:before {
 }
 .embedtv iframe {
   /* width: 100%;
-  height: 520rem; */
+  height: 520px; */
   position: absolute;
   top: 0;
   left: 0;
@@ -1149,7 +1149,7 @@ tbody:before {
   height: 100%;
 }
 .outrosvid {
-  margin-top: 36rem;
+  margin-top: 36px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5%;
@@ -1205,44 +1205,44 @@ iframe {
   background-image: url(../img/fundo\ patrocinadores2.png);
   background-repeat: revert;
   background-position: center;
-  padding: 96rem 0 192rem;
+  padding: 96px 0 192px;
   box-shadow: inset 0 90px 25px -80px Rgba(0, 0, 0, 0.2);
 }
 .patrowbox {
   background-color: #fff;
   width: fit-content;
   margin: 0 auto;
-  padding-bottom: 80rem;
+  padding-bottom: 80px;
   top: -25px;
   box-shadow: 0 0 25px 0 Rgba(0, 0, 0, 0.25);
 }
 .patrocinadores {
-  width: 1050rem;
+  width: 1050px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: 68rem;
+  padding-top: 68px;
 }
 
 .patrotext {
-  font-size: 28rem;
+  font-size: 28px;
   color: #333;
-  margin-bottom: 28rem;
+  margin-bottom: 28px;
 }
 
 .patrow {
   display: flex;
   text-align: center;
   justify-content: center;
-  width: 1050rem;
+  width: 1050px;
 }
 .patroimgbox:not(:first-child) {
-  margin-left: 48rem;
+  margin-left: 48px;
 }
 .patroimgbox {
-  width: 160rem;
-  height: 126rem;
+  width: 160px;
+  height: 126px;
 }
 .patroimg {
   width: auto;
@@ -1258,7 +1258,7 @@ iframe {
 .seppat {
   width: 80%;
   height: 1px;
-  margin: 8rem auto;
+  margin: 8px auto;
 
   background: linear-gradient(
     90deg,
@@ -1268,25 +1268,25 @@ iframe {
   );
 }
 .parceiros {
-  width: 1050rem;
+  width: 1050px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-top: 80rem;
+  padding-top: 80px;
 }
 .parctext {
-  font-size: 24rem;
+  font-size: 24px;
   color: #555;
-  margin-bottom: 43rem;
+  margin-bottom: 43px;
 }
 
 .patroimgbox.parc {
-  width: 130rem;
-  height: 102rem;
+  width: 130px;
+  height: 102px;
 }
 .parceiros .marcaspat .seppat {
-  margin: 23rem auto;
+  margin: 23px auto;
 }
 
 /* ////////////////////////////////////////// */
@@ -1296,31 +1296,31 @@ iframe {
 .tudofot {
   display: flex;
   flex-direction: column;
-  padding-bottom: 24rem;
+  padding-bottom: 24px;
   background-color: #222;
 }
 .fothead {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 80rem;
+  height: 80px;
   background-color: #333;
 }
 .escudofot {
-  width: 475rem;
+  width: 475px;
   position: relative;
-  top: -125rem;
+  top: -125px;
 }
 .escudofot img {
   width: 100%;
 }
 .omais {
   color: #555;
-  font-size: 32rem;
+  font-size: 32px;
   margin: auto 0;
 }
 .map {
-  padding-top: 128rem;
+  padding-top: 128px;
   margin: 0 auto;
 }
 .mapcent {
@@ -1329,27 +1329,27 @@ iframe {
 
 .maptitle {
   color: #e1e1e1;
-  font-size: 20rem;
-  margin-bottom: 38rem;
+  font-size: 20px;
+  margin-bottom: 38px;
   display: flex;
-  height: 50rem;
+  height: 50px;
   align-items: center;
 }
 .mapcent {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 190rem);
-  row-gap: 54rem;
+  grid-template-columns: repeat(4, 190px);
+  row-gap: 54px;
 }
 .boxitems {
   display: grid;
-  row-gap: 14rem;
+  row-gap: 14px;
 }
 .boxitems a:link,
 .boxitems a:visited {
   text-decoration: none;
   color: #b6b6b6;
-  font-size: 16rem;
+  font-size: 16px;
   transition: 0.2s all;
   font-family: "Inter", sans-serif;
 }
@@ -1357,34 +1357,34 @@ iframe {
 .boxitems a:active {
   text-decoration: none;
   color: #fff;
-  font-size: 16rem;
+  font-size: 16px;
 }
 
 .fotfot {
-  width: 760rem;
+  width: 760px;
   margin: 0 auto;
-  padding-top: 96rem;
+  padding-top: 96px;
 }
 
 .foot3 {
   color: #fff;
-  font-size: 20rem;
+  font-size: 20px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
 }
 .foot3 p {
-  margin-bottom: 18rem;
+  margin-bottom: 18px;
 }
 .fotcol {
   display: flex;
   flex-direction: column;
   width: inherit;
-  font-size: 16rem;
+  font-size: 16px;
   font-weight: 500;
 }
 .sedeadres {
   color: #ababab;
-  margin-top: 18rem;
+  margin-top: 18px;
   font-weight: 300;
 }
 .footlink:link,
@@ -1411,11 +1411,11 @@ iframe {
 
 .redessociais.foot {
   align-self: baseline;
-  margin-bottom: 10rem;
+  margin-bottom: 10px;
 }
 .iconerede {
-  height: 20rem;
-  width: 20rem;
+  height: 20px;
+  width: 20px;
   color: #cecece;
   transition: all 0.2s ease-in;
 }
@@ -1426,7 +1426,7 @@ iframe {
 .footerfooterfooter {
   font-family: "inter", sans-serif;
   color: #b3b3b3;
-  font-size: 14rem;
+  font-size: 14px;
   text-align: center;
-  margin-top: 60rem;
+  margin-top: 60px;
 }

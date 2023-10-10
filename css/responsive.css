@@ -5,11 +5,11 @@
     justify-content: space-between;
   }
   .headerflex {
-    height: 160rem;
+    height: 160px;
   }
   .topheader {
     justify-content: space-between;
-    padding: 0 10rem;
+    padding: 0 10px;
   }
   .glorioso {
     top: -73px;
@@ -36,7 +36,7 @@
     opacity: 0;
   }
   .patrocinio {
-    height: 48rem;
+    height: 48px;
   }
   .menuicon {
     display: block;
@@ -48,7 +48,7 @@
     width: 90%;
   }
   .menuhid {
-    height: 160rem;
+    height: 160px;
   }
   .caixa,
   .patrowbox,
@@ -65,7 +65,7 @@
   }
 
   .omais {
-    font-size: 24rem;
+    font-size: 24px;
   }
   .openm .menuicon {
     background-color: #fff;
@@ -75,19 +75,19 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 160rem;
+    top: 160px;
     background-color: #fff;
-    height: calc(100vh - 190rem);
+    height: calc(100vh - 190px);
     overflow-y: auto;
   }
   .scrollup.openm .sites {
-    height: calc(100vh - 110rem);
+    height: calc(100vh - 110px);
   }
   .search.scrollup.openm .sites {
-    height: calc(100vh - 154rem);
+    height: calc(100vh - 154px);
   }
   .search.openm .sites {
-    height: calc(100vh - 234rem);
+    height: calc(100vh - 234px);
   }
   .openm .sites a {
     color: #333;
@@ -102,8 +102,8 @@
 
   .openm .titulochev {
     display: block;
-    height: 36rem;
-    width: 36rem;
+    height: 36px;
+    width: 36px;
     color: #333;
   }
   .openm .tituloh {
@@ -135,10 +135,10 @@
     background-color: #fff;
   }
   .openm .sites {
-    margin-top: 18rem;
+    margin-top: 18px;
   }
   .openm .princi {
-    font-size: 24rem;
+    font-size: 24px;
   }
   .openm .tituloh:hover .flexopenmenu {
     color: #333;
@@ -167,16 +167,16 @@
     position: relative;
     transform: none;
     padding: 0;
-    margin-top: 8rem;
-    margin-bottom: 12rem;
+    margin-top: 8px;
+    margin-bottom: 12px;
     width: 100%;
     justify-content: space-between;
-    padding-left: 24rem;
-    padding-right: 14rem;
+    padding-left: 24px;
+    padding-right: 14px;
   }
   .openm .topen .backdrop .fundob {
     display: grid;
-    row-gap: 16rem;
+    row-gap: 16px;
     width: 100%;
   }
 
@@ -190,10 +190,10 @@
     width: 100%;
     align-items: center;
     cursor: pointer;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    padding-left: 24rem;
-    padding-right: 14rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 24px;
+    padding-right: 14px;
   }
   .openm .topen .subt:hover:not(.pr) {
     color: #000;
@@ -212,7 +212,7 @@
 
   .fundob:not(:first-child) {
     margin-left: 0;
-    margin-top: 16rem;
+    margin-top: 16px;
   }
 
   /* .openm.scrollup .headerflex {
@@ -222,19 +222,19 @@
     background-image: url(../img/bannersite2.png);
   } */
   .postimg {
-    height: 550rem;
+    height: 550px;
   }
   .titulo h1 {
-    font-size: 42rem;
-    letter-spacing: 4rem;
+    font-size: 42px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     margin-bottom: 0;
   }
   .titulo h4 {
-    font-size: 14rem;
+    font-size: 14px;
   }
   .search .sites {
-    margin-top: 68rem;
+    margin-top: 68px;
   }
 }
 /* 1040 */
@@ -246,26 +246,26 @@
     display: none;
   }
   .class th:nth-child(2) {
-    margin-left: -35rem;
+    margin-left: -35px;
   }
   .btnpartidas {
-    font-size: 12rem;
+    font-size: 12px;
   }
   .escudop {
-    width: 70rem;
-    height: 93rem;
+    width: 70px;
+    height: 93px;
   }
   .titulo {
     width: 70%;
   }
   .postimg {
-    height: 500rem;
+    height: 500px;
   }
   .omais {
-    font-size: 18rem;
+    font-size: 18px;
   }
   .vs {
-    margin-bottom: 16rem;
+    margin-bottom: 16px;
   }
 }
 /* 1000 */
@@ -310,30 +310,30 @@
   }
   .tabela td::nth-child(2) {
     width: 45%;
-    margin-right: 38rem;
+    margin-right: 38px;
   }
   .tabela td:first-child {
     width: 5%;
   }
   .jogosclas {
-    height: 629rem;
+    height: 629px;
   }
   .times {
     justify-content: space-around;
   }
   .escudop {
-    width: 90rem;
-    height: 93rem;
+    width: 90px;
+    height: 93px;
   }
   .btnap {
     display: none;
   }
   .btn a ion-icon {
-    font-size: 20rem;
+    font-size: 20px;
     color: #fff;
   }
   .btn {
-    padding: 7rem 7rem;
+    padding: 7px 7px;
     background-color: transparent;
   }
   .btn:hover a ion-icon {
@@ -355,7 +355,7 @@
     transform: translateX(-50%);
   }
   .tsvw .imgloja {
-    height: 550rem;
+    height: 550px;
     width: 100%;
     overflow: hidden;
   }
@@ -382,53 +382,53 @@
     display: none;
   }
   .titulo h1 {
-    font-size: 34rem;
-    letter-spacing: 2rem;
+    font-size: 34px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 0;
   }
   .titulo h4 {
-    font-size: 12rem;
-    padding-bottom: 4rem;
-    padding-left: 2rem;
+    font-size: 12px;
+    padding-bottom: 4px;
+    padding-left: 2px;
   }
   .titulo p {
-    font-size: 14rem;
+    font-size: 14px;
   }
   .btnmateria {
-    font-size: 14rem;
+    font-size: 14px;
   }
   .btnpartidas {
-    font-size: 16rem;
+    font-size: 16px;
   }
 }
 /* 848 */
 @media (max-width: 53em) {
   .titulotv {
-    font-size: 24rem;
+    font-size: 24px;
   }
   .tv {
-    padding: 32rem;
+    padding: 32px;
   }
   .botafogotv {
-    padding-bottom: 64rem;
+    padding-bottom: 64px;
   }
   .apoio {
-    padding: 64rem 0 96rem;
+    padding: 64px 0 96px;
   }
   .lojatitulo {
-    padding-top: 64rem;
+    padding-top: 64px;
   }
   .maptitle {
-    font-size: 18rem;
-    margin-bottom: 18rem;
-    height: 38rem;
+    font-size: 18px;
+    margin-bottom: 18px;
+    height: 38px;
   }
   .boxitems {
-    row-gap: 12rem;
+    row-gap: 12px;
   }
   .mapbox {
-    margin-right: 18rem;
+    margin-right: 18px;
   }
   .map,
   .fotfot {
@@ -438,18 +438,18 @@
     grid-template-columns: repeat(4, 1fr);
   }
   .fotcol {
-    font-size: 14rem;
+    font-size: 14px;
   }
   .fotcol:not(:first-child) {
-    margin-right: 18rem;
+    margin-right: 18px;
     width: 70%;
   }
   .footerfooterfooter {
-    font-size: 10rem;
+    font-size: 10px;
   }
   .foot3 p:first-child {
-    font-size: 16rem;
-    letter-spacing: 2rem;
+    font-size: 16px;
+    letter-spacing: 2px;
   }
   .parceiros .patrow:first-child {
     display: grid;
@@ -475,27 +475,27 @@
     background-size: 200%;
   }
   .jogosclas h3 {
-    font-size: 28rem;
+    font-size: 28px;
   }
   .tabela td:first-child {
     width: 10%;
   }
   .tsvw .imgloja {
-    height: 500rem;
+    height: 500px;
   }
   .lojaonline {
-    padding-bottom: 64rem;
+    padding-bottom: 64px;
   }
   .fothead {
-    height: 35rem;
+    height: 35px;
   }
   .escudofot {
-    width: 200rem;
+    width: 200px;
     position: relative;
     top: -150%;
   }
   .map {
-    padding-top: 96rem;
+    padding-top: 96px;
   }
 }
 /* 656 */
@@ -504,10 +504,10 @@
     display: none;
   }
   .jogosclas {
-    height: 591rem;
+    height: 591px;
   }
   .postimg {
-    height: 400rem;
+    height: 400px;
   }
   .titulo {
     width: 100%;
@@ -517,23 +517,23 @@
   }
   .iconnav {
     color: #fff;
-    padding: 6rem;
-    width: 16rem;
-    height: 16rem;
+    padding: 6px;
+    width: 16px;
+    height: 16px;
   }
   .headerflex {
-    height: 130rem;
+    height: 130px;
   }
   .patrocinio {
-    height: 28rem;
+    height: 28px;
   }
   .container {
-    padding-top: 12rem;
-    padding-bottom: 10rem;
+    padding-top: 12px;
+    padding-bottom: 10px;
   }
   .patroimgbox {
-    width: 130rem;
-    height: 100rem;
+    width: 130px;
+    height: 100px;
   }
   .contatoend {
     display: grid;
@@ -541,7 +541,7 @@
   }
   .fotcol:first-child {
     grid-column: 1 / span 2;
-    margin-bottom: 24rem;
+    margin-bottom: 24px;
     width: 100%;
     text-align: center;
   }
@@ -551,20 +551,20 @@
     text-align: center;
   }
   .fotcol:nth-child(2) {
-    margin-left: 60rem;
+    margin-left: 60px;
   }
   .fotcol:nth-child(3) {
-    margin-left: 36rem;
+    margin-left: 36px;
   }
   .botafogotv {
     padding: 0;
   }
   .tv {
     width: 100%;
-    padding: 48rem 24rem;
+    padding: 48px 24px;
   }
   .lojaonline {
-    padding-bottom: 48rem;
+    padding-bottom: 48px;
   }
   .patrowbox {
     background-color: #ffffffab;
@@ -572,22 +572,22 @@
   }
   .lojatitulo h2 {
     width: 100%;
-    font-size: 36rem;
+    font-size: 36px;
     letter-spacing: 3px;
-    padding-left: 24rem;
+    padding-left: 24px;
   }
   .search .searchbar {
-    height: 48rem;
+    height: 48px;
   }
   .search .caixasd .icone:nth-child(2) {
-    margin-bottom: 4rem;
+    margin-bottom: 4px;
   }
   .search .caixasd {
-    height: 101rem;
-    margin-bottom: -63rem;
+    height: 101px;
+    margin-bottom: -63px;
   }
   .hide.search .caixasd {
-    height: 81rem;
+    height: 81px;
   }
 
   .escudo {
@@ -614,16 +614,16 @@
     width: 93%;
   }
   #search {
-    font-size: 18rem;
+    font-size: 18px;
   }
   .openm .sites {
     margin-top: 0;
   }
   .search .sites {
-    margin-top: 32rem;
+    margin-top: 32px;
   }
   .menuhid {
-    height: 130rem;
+    height: 130px;
   }
   .bola {
     width: 8px;
@@ -639,10 +639,10 @@
     background-color: #fff;
   }
   .tituloebtn {
-    padding-bottom: 55rem;
+    padding-bottom: 55px;
   }
   .carrosel {
-    transform: translateY(-43rem);
+    transform: translateY(-43px);
   }
   .caixa {
     width: 100%;
@@ -657,36 +657,36 @@
     left: 62%;
   }
   .parctext {
-    font-size: 18rem;
+    font-size: 18px;
   }
 
   .patrotext {
-    font-size: 24rem;
+    font-size: 24px;
   }
   .search.openm .sites {
-    height: calc(100vh - 204rem);
+    height: calc(100vh - 204px);
   }
   .openm .sites {
-    height: calc(100vh - 173rem);
+    height: calc(100vh - 173px);
   }
   .scrollup.openm .sites {
-    height: calc(100vh - 103rem);
+    height: calc(100vh - 103px);
   }
   .search.scrollup.openm .sites {
-    height: calc(100vh - 134rem);
+    height: calc(100vh - 134px);
   }
 }
 /* 540 */
 @media (max-width: 34em) {
   .openm .topen .backdrop .fundob {
-    row-gap: 14rem;
+    row-gap: 14px;
   }
   .topen .backdrop {
-    padding-top: 4rem;
+    padding-top: 4px;
   }
   .openm .flexopenmenu {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
   .backdrop {
     grid-template-columns: 1fr;
@@ -705,48 +705,48 @@
     margin: 0 auto;
   }
   .tsvw .imgloja {
-    height: 450rem;
+    height: 450px;
   }
   .lojaonline {
-    padding-bottom: 0rem;
+    padding-bottom: 0px;
   }
   .tsvw .esq .btncompre,
   .tsvw .dir .btncompre {
-    font-size: 12rem;
+    font-size: 12px;
   }
   .btn {
-    padding: 6rem 6rem;
+    padding: 6px 6px;
   }
   .btn a ion-icon {
-    font-size: 18rem;
+    font-size: 18px;
   }
   .menuiconion {
-    height: 24rem;
-    width: 24rem;
+    height: 24px;
+    width: 24px;
   }
   .caixasd {
-    margin-left: 12rem;
-    height: 32rem;
+    margin-left: 12px;
+    height: 32px;
   }
   .caixasd .icone {
-    padding: 6.5rem 6.5rem;
+    padding: 6.5px 6.5px;
   }
   #search {
-    font-size: 16rem;
-    margin-left: 60rem;
+    font-size: 16px;
+    margin-left: 60px;
   }
   .search .caixasd {
-    height: 94rem;
-    margin-bottom: -64rem;
+    height: 94px;
+    margin-bottom: -64px;
   }
   .acoes {
-    height: 30rem;
+    height: 30px;
   }
   .grad {
     background-size: 250%;
   }
   .headerflex {
-    height: 110rem;
+    height: 110px;
   }
   .escudo {
     height: 65px;
@@ -757,17 +757,17 @@
     transform: translate(-50%, 87%);
   }
   .menuhid {
-    height: 110rem;
+    height: 110px;
   }
   .scrollup .borda {
     width: 89%;
     top: 9px;
   }
   .search .sites {
-    margin-top: 20rem;
+    margin-top: 20px;
   }
   .search.openm .sites {
-    height: calc(100vh - 184rem);
+    height: calc(100vh - 184px);
   }
 }
 /* 512 */
@@ -777,54 +777,54 @@
   }
 
   .times p {
-    height: 40rem;
-    width: 70rem;
-    font-size: 14rem;
+    height: 40px;
+    width: 70px;
+    font-size: 14px;
   }
   .escudop {
-    width: 70rem;
+    width: 70px;
   }
   .btnpartidas {
-    padding: 8rem 8rem;
-    font-size: 14rem;
+    padding: 8px 8px;
+    font-size: 14px;
   }
   .proxjogo,
   .class {
-    padding: 26rem 24rem;
+    padding: 26px 24px;
   }
   .vejamaispartidas {
-    margin-top: 10rem;
+    margin-top: 10px;
   }
   .tsvw .imgloja {
-    height: 400rem;
+    height: 400px;
   }
   .tsvw .flexloja {
     width: 65%;
   }
   .titulotv {
-    font-size: 18rem;
+    font-size: 18px;
   }
   .btntv {
-    font-size: 14rem;
-    padding: 6rem 12rem;
+    font-size: 14px;
+    padding: 6px 12px;
   }
   .tv {
-    padding: 48rem 16rem;
+    padding: 48px 16px;
   }
   .lojajs .tsvw {
-    height: 500rem;
+    height: 500px;
   }
   .openm .sites {
     margin-top: -35px;
   }
   .search .sites {
-    margin-top: 10rem;
+    margin-top: 10px;
   }
   .openm .sites {
-    height: calc(100vh - 140rem);
+    height: calc(100vh - 140px);
   }
   .search.openm .sites {
-    height: calc(100vh - 180rem);
+    height: calc(100vh - 180px);
   }
 }
 /* 432 */
@@ -834,13 +834,13 @@
     transform: translateX(-4%);
   }
   .titulo h1 {
-    font-size: 24rem;
-    letter-spacing: 2rem;
+    font-size: 24px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 0;
   }
   .postimg {
-    height: 300rem;
+    height: 300px;
   }
   .bola:not(:last-child) {
     margin-right: 6px;
@@ -850,7 +850,7 @@
     height: 6px;
   }
   .patrocinio {
-    height: 20rem;
+    height: 20px;
   }
   .postgrad {
     background: linear-gradient(
@@ -862,23 +862,23 @@
     );
   }
   .headerflex {
-    height: 80rem;
+    height: 80px;
   }
   .menuhid {
-    height: 80rem;
+    height: 80px;
   }
   .glorioso {
     top: -85px;
   }
   .container {
-    padding-bottom: 5rem;
+    padding-bottom: 5px;
   }
   .scrollup .glorioso {
     top: -75px;
   }
   .search .caixasd {
-    height: 88rem;
-    margin-bottom: -55rem;
+    height: 88px;
+    margin-bottom: -55px;
   }
   .scrollup .escudo {
     height: 40px;
@@ -894,38 +894,38 @@
     margin-top: -25px;
   }
   .hide.search .caixasd {
-    margin-bottom: -51rem;
+    margin-bottom: -51px;
   }
   .openm .sites {
-    height: calc(100vh - 110rem);
+    height: calc(100vh - 110px);
   }
   .search.openm .sites {
-    height: calc(100vh - 145rem);
+    height: calc(100vh - 145px);
   }
   .scrollup.openm .sites {
-    height: calc(100vh - 70rem);
+    height: calc(100vh - 70px);
   }
   .scrollup.search.openm .sites {
-    height: calc(100vh - 110rem);
+    height: calc(100vh - 110px);
   }
   #search {
-    margin-left: 27rem;
+    margin-left: 27px;
   }
   .times p {
-    font-size: 12rem;
+    font-size: 12px;
   }
   .escudop {
-    width: 60rem;
-    height: 63rem;
+    width: 60px;
+    height: 63px;
   }
   .tabela {
-    font-size: 16rem;
+    font-size: 16px;
   }
 
   .parceiros .patrow .patroimgbox,
   .patroimgbox {
-    width: 100rem;
-    height: 80rem;
+    width: 100px;
+    height: 80px;
   }
   .patrow {
     align-items: center;
@@ -938,11 +938,11 @@
     grid-column: 4 / span 2;
   }
   .maptitle {
-    font-size: 16rem;
+    font-size: 16px;
   }
   .boxitems a:link,
   .boxitems a:visited {
-    font-size: 12rem;
+    font-size: 12px;
   }
   .contatoend {
     display: grid;
@@ -957,36 +957,36 @@
     text-align: center;
   }
   .fotcol:last-child {
-    margin-top: 18rem;
+    margin-top: 18px;
   }
   .sedeadres {
-    margin-top: 8rem;
+    margin-top: 8px;
   }
   .openm .princi {
-    font-size: 20rem;
+    font-size: 20px;
   }
   .openm .flexopenmenu {
-    padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding-top: 6px;
+    padding-bottom: 3px;
   }
   .openm .titulochev {
-    height: 28rem;
-    width: 28rem;
+    height: 28px;
+    width: 28px;
   }
   .openm .topen .backdrop .fundob {
-    row-gap: 8rem;
+    row-gap: 8px;
   }
   .class th:nth-child(2) {
-    margin-left: -28rem;
+    margin-left: -28px;
   }
   .btntv {
-    font-size: 12rem;
-    padding: 6rem 6rem;
+    font-size: 12px;
+    padding: 6px 6px;
   }
   .container {
-    padding-bottom: 4rem;
+    padding-bottom: 4px;
   }
   .scrollup .bottomheader {
-    margin-bottom: -2rem;
+    margin-bottom: -2px;
   }
 }
