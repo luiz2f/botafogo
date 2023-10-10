@@ -977,17 +977,17 @@ tbody:before {
 }
 
 .lojaonline.tche {
-  background-image: url(../img/loja/efeitos/fun\ tche.jpg);
+  background-image: url(../img/loja/efeitos/funtche.jpg);
   background-position: center;
   box-shadow: inset 0 0 15px 0 #c9e9ea;
 }
 .lojaonline.adry {
-  background-image: url(../img/loja/efeitos/fun\ adry.jpg);
+  background-image: url(../img/loja/efeitos/funadry.jpg);
   background-position: center;
   box-shadow: inset 0 0 15px 0 #f2f2f2;
 }
 .lojaonline.edu {
-  background-image: url(../img/loja/efeitos/fun\ ed.jpg);
+  background-image: url(../img/loja/efeitos/funed.jpg);
   background-position: center;
   box-shadow: inset 0 0 15px 0 #000;
 }

@@ -356,6 +356,8 @@
   }
   .tsvw .imgloja {
     height: 550rem;
+    width: 100%;
+    overflow: hidden;
   }
   .tsvw .esq {
     transform: scale(0.8);
