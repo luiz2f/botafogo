@@ -948,6 +948,8 @@ BANNER
 }
 table {
   border-collapse: collapse;
+
+  width: 100%;
 }
 .tabela table tbody tr:not(:last-child) {
   border-bottom: 1px solid #e4e4e4;

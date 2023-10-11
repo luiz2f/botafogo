@@ -1,4 +1,0 @@
------
-Implementar
-- touch no carrosel de noticia 
-- touch e click no carrosel de partidas

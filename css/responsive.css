@@ -427,15 +427,18 @@
   .boxitems {
     row-gap: 12px;
   }
-  .mapbox {
-    margin-right: 18px;
+
+  .mapcent {
+    column-gap: 12px;
   }
+
   .map,
   .fotfot {
     width: 85%;
   }
   .mapcent {
     grid-template-columns: repeat(4, 1fr);
+    row-gap: 28px;
   }
   .fotcol {
     font-size: 14px;
