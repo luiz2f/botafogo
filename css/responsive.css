@@ -77,17 +77,17 @@
     position: absolute;
     top: 160px;
     background-color: #fff;
-    height: calc(100vh - 190px);
+    height: calc(100vh - 240px);
     overflow-y: auto;
   }
   .scrollup.openm .sites {
-    height: calc(100vh - 110px);
+    height: calc(100vh - 160px);
   }
   .search.scrollup.openm .sites {
-    height: calc(100vh - 154px);
+    height: calc(100vh - 220px);
   }
   .search.openm .sites {
-    height: calc(100vh - 234px);
+    height: calc(100vh - 280px);
   }
   .openm .sites a {
     color: #333;
@@ -527,10 +527,9 @@
   .patrocinio {
     height: 28px;
   }
-  .container {
-    padding-top: 12px;
+  /* .container {
     padding-bottom: 10px;
-  }
+  } */
   .patroimgbox {
     width: 130px;
     height: 100px;
@@ -664,16 +663,22 @@
     font-size: 24px;
   }
   .search.openm .sites {
-    height: calc(100vh - 204px);
+    height: calc(100vh - 260px);
   }
   .openm .sites {
-    height: calc(100vh - 173px);
+    height: calc(100vh - 230px);
   }
   .scrollup.openm .sites {
-    height: calc(100vh - 103px);
+    height: calc(100vh - 170px);
   }
   .search.scrollup.openm .sites {
-    height: calc(100vh - 134px);
+    height: calc(100vh - 200px);
+  }
+  .grad.scrollup {
+    transform: translateY(-40%);
+  }
+  .grad.hide {
+    transform: translate(0, -125%);
   }
 }
 /* 540 */
@@ -763,11 +768,23 @@
     width: 89%;
     top: 9px;
   }
+  .openm .sites {
+    top: 130px;
+  }
   .search .sites {
-    margin-top: 20px;
+    margin-top: 38px;
   }
   .search.openm .sites {
-    height: calc(100vh - 184px);
+    height: calc(100vh - 230px);
+  }
+  .openm .sites {
+    height: calc(100vh - 190px);
+  }
+  .scrollup.openm .sites {
+    height: calc(100vh - 150px);
+  }
+  .search.scrollup.openm .sites {
+    height: calc(100vh - 190px);
   }
 }
 /* 512 */
@@ -887,26 +904,24 @@
     width: 82%;
     top: 39px;
   }
-  .openm .sites {
-    margin-top: -65px;
-  }
+
   .search.openm .sites {
-    margin-top: -25px;
+    margin-top: 12px;
   }
   .hide.search .caixasd {
     margin-bottom: -51px;
   }
   .openm .sites {
-    height: calc(100vh - 110px);
+    height: calc(100vh - 160px);
   }
   .search.openm .sites {
-    height: calc(100vh - 145px);
+    height: calc(100vh - 200px);
   }
   .scrollup.openm .sites {
-    height: calc(100vh - 70px);
+    height: calc(100vh - 140px);
   }
   .scrollup.search.openm .sites {
-    height: calc(100vh - 110px);
+    height: calc(100vh - 190px);
   }
   #search {
     margin-left: 27px;

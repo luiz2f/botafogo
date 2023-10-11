@@ -93,12 +93,12 @@ mmtitles.forEach(function (mmt) {
   });
 });
 
-menumobile.addEventListener("click", () => {
+menumobile.addEventListener("click", (e) => {
   menu.classList.toggle("openm");
+  e.preventDefault();
   if (headsrch.classList.contains("openm")) {
     body.style.overflowY = "hidden";
     menumobile.name = "close-outline";
-    inputsr.focus();
   } else {
     mmtitles.forEach(function (mmc) {
       mmc.classList.remove("topen");
@@ -205,34 +205,8 @@ dragNt.addEventListener("mousedown", (e) => {
   startX = e.pageX - dragNt.offsetLeft;
   scrollLeft = dragNt.scrollLeft;
 });
-dragNt.addEventListener("mouseleave", () => {
-  if (walkperc < -3) {
-    nextNt();
-  }
-  if (walkperc > 3) {
-    prevNt();
-  }
-  if (walkperc > -3 || walkperc < 3) {
-    nada();
-  }
-  isDown = false;
-  dragNt.classList.remove("dragatv");
-  walkperc = 0;
-});
-dragNt.addEventListener("mouseup", () => {
-  if (walkperc < -3) {
-    nextNt();
-  }
-  if (walkperc > 3) {
-    prevNt();
-  }
-  if (walkperc > -3 || walkperc < 3) {
-    nada();
-  }
-  isDown = false;
-  dragNt.classList.remove("dragatv");
-  walkperc = 0;
-});
+dragNt.addEventListener("mouseleave", mouseleave);
+dragNt.addEventListener("mouseup", mouseleave);
 dragNt.addEventListener("mousemove", (e) => {
   if (!isDown) return;
   e.preventDefault();
@@ -246,70 +220,96 @@ dragNt.addEventListener("mousemove", (e) => {
 /// drag mobile
 
 dragNt.addEventListener("touchstart", (e) => {
-  console.log("start");
-  // screenWidth = dragNt.offsetWidth;
+  screenWidth = dragNt.offsetWidth;
 
-  // isDown = true;
-  // startX = e.pageX - dragNt.offsetLeft;
-  // scrollLeft = dragNt.scrollLeft;
+  isDown = true;
+  startX = e.changedTouches[0].clientX;
 });
-dragNt.addEventListener("touchcancel", () => {
-  console.log("canc");
-
-  // if (walkperc < -3) {
-  //   nextNt();
-  // }
-  // if (walkperc > 3) {
-  //   prevNt();
-  // }
-  // if (walkperc > -3 || walkperc < 3) {
-  //   nada();
-  // }
-  // isDown = false;
-  // dragNt.classList.remove("dragatv");
-  // walkperc = 0;
-});
-dragNt.addEventListener("touchend", () => {
-  console.log("end");
-
-  // if (walkperc < -3) {
-  //   nextNt();
-  // }
-  // if (walkperc > 3) {
-  //   prevNt();
-  // }
-  // if (walkperc > -3 || walkperc < 3) {
-  //   nada();
-  // }
-  // isDown = false;
-  // dragNt.classList.remove("dragatv");
-  // walkperc = 0;
-});
+dragNt.addEventListener("touchcancel", mouseleave);
+dragNt.addEventListener("touchend", mouseleave);
 dragNt.addEventListener("touchmove", (e) => {
-  console.log("mose");
-
-  // if (!isDown) return;
-  // e.preventDefault();
-  // const x = e.pageX - dragNt.offsetLeft;
-  // const walk = x - startX;
-  // walkperc = (walk / screenWidth) * 100;
-  // let percrollNt = atualNt * 100;
-  // rollNt.style.transform = `translateX(calc( -${percrollNt}% + ${walkperc}% ))`;
-  // console.log("Valor de walkperc:", walkperc);
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.changedTouches[0].clientX;
+  const walk = x - startX;
+  walkperc = (walk / screenWidth) * 100;
+  let percrollNt = atualNt * 100;
+  rollNt.style.transform = `translateX(calc( -${percrollNt}% + ${walkperc}% ))`;
 });
+
+// function drag
+
+function mouseleave() {
+  if (walkperc < -3) {
+    nextNt();
+  }
+  if (walkperc > 3) {
+    prevNt();
+  }
+  if (walkperc > -3 || walkperc < 3) {
+    nada();
+  }
+  isDown = false;
+  walkperc = 0;
+}
 
 ///////////////////////////// PARTIDAS Carrosel
 
 let atual = 2;
 const rollPt = document.querySelector(".rollpartidas");
 const todosPt = document.querySelectorAll(".partida");
+const janelaPt = document.querySelector(".partidas");
+
 const prevBtnPt = document.querySelector(".jgant");
 const nextBtnPt = document.querySelector(".jgprox");
 
+// botoes
 nextBtnPt.addEventListener("click", next);
-
-// Adicionar event listener para o botão "Anterior"
 prevBtnPt.addEventListener("click", prev);
+
+// touch
+janelaPt.addEventListener("touchstart", (e) => {
+  console.log(1);
+  screenWidth = dragNt.offsetWidth;
+  isDown = true;
+  startX = e.changedTouches[0].clientX;
+});
+janelaPt.addEventListener("touchcancel", mouseleavePt);
+janelaPt.addEventListener("touchend", mouseleavePt);
+janelaPt.addEventListener("touchmove", (e) => {
+  console.log(2);
+
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.changedTouches[0].clientX;
+  const walk = x - startX;
+  walkperc = (walk / screenWidth) * 100;
+  let percroll = atual * 100;
+  let margroll = atual * 48;
+
+  rollPt.style.transform = `translateX(calc(-${walkperc}% -${percroll}% - ${margroll}px))`;
+});
+
+function mouseleavePt() {
+  console.log(3);
+
+  if (walkperc < -3) {
+    next();
+  }
+  if (walkperc > 3) {
+    prev();
+  }
+  if (walkperc > -3 || walkperc < 3) {
+    nadaPt();
+  }
+  isDown = false;
+  walkperc = 0;
+}
+function nadaPt() {
+  let percroll = atual * 100;
+  let margroll = atual * 48;
+  rollPt.style.transform = `translateX(calc(-${percroll}% - ${margroll}px))`;
+}
 
 function next() {
   if (atual !== todosPt.length - 1) {
@@ -317,7 +317,7 @@ function next() {
 
     let percroll = atual * 100;
     let margroll = atual * 48;
-    rollPt.style.transform = `translateX(calc(-${percroll}% - ${margroll}rem))`;
+    rollPt.style.transform = `translateX(calc(-${percroll}% - ${margroll}px))`;
   }
   if (atual === todosPt.length - 1) {
     nextBtnPt.style.display = "none";
@@ -329,7 +329,7 @@ function prev() {
     atual = atual - 1;
     let percroll = atual * 100;
     let margroll = atual * 48;
-    rollPt.style.transform = `translateX(calc(-${percroll}% - ${margroll}rem))`;
+    rollPt.style.transform = `translateX(calc(-${percroll}% - ${margroll}px))`;
   }
   nextBtnPt.style.display = "block";
 }
@@ -339,14 +339,34 @@ const itens = document.querySelectorAll(".flexloja");
 const fundolojaimg = document.querySelector(".lojaonline");
 const loja = document.querySelector(".lojajs");
 const displayloja = document.querySelector(".loja");
+const links = ["", "", ""];
+const comprar = document.querySelectorAll(".btncompre");
 
 loja.addEventListener("mouseout", (event) => {
-  if (dragNt.offsetWidth > 928) {
+  if (mobile == false) {
     if (event.relatedTarget !== null && !loja.contains(event.relatedTarget)) {
       fundolojaimg.classList.remove("tche", "adry", "edu");
     }
   }
 });
+
+let mobile = false;
+window.addEventListener("resize", (e) => {
+  const larguraDaJanela = window.innerWidth;
+  if (larguraDaJanela < 928) {
+    lojamobile();
+    mobile = true;
+  }
+  if (larguraDaJanela > 928) {
+    fundolojaimg.classList.remove("tche", "adry", "edu");
+    mobile = false;
+  }
+});
+
+if (dragNt.offsetWidth < 928) {
+  mobile = true;
+  lojamobile();
+}
 
 itens.forEach((item, index) => {
   item.addEventListener("mouseover", () => {
@@ -366,20 +386,9 @@ itens.forEach((item, index) => {
     }
   });
 });
-////////////////////////////// LOJA MOBILE
-window.addEventListener("resize", (e) => {
-  const larguraDaJanela = window.innerWidth;
-  if (larguraDaJanela < 928) {
-    lojamobile();
-  }
-  if (larguraDaJanela > 928) {
-    fundolojaimg.classList.remove("tche", "adry", "edu");
-  }
-});
 
-if (dragNt.offsetWidth < 928) {
-  lojamobile();
-}
+////////////////////////////// LOJA MOBILE
+
 function lojamobile() {
   fundolojaimg.classList.add("adry");
   itens.forEach((it, i) => {

@@ -46,7 +46,7 @@ header {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 200px;
+  height: 100%;
   width: 1222px;
   margin: auto;
   /* padding-top: 30px;
@@ -380,9 +380,9 @@ a .iconeentrar {
 #search:focus-visible {
   outline: none;
 }
-.search .bottomheader {
+/* .search .bottomheader {
   margin-top: -55px;
-}
+} */
 .search .caixasd {
   height: 115px;
   margin-bottom: -78px;
@@ -507,6 +507,7 @@ BANNER
   height: 650px;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   background-size: cover;
   z-index: -2;
   flex: 0 0 100%;
@@ -821,8 +822,8 @@ BANNER
   align-items: center;
 }
 .mandante img {
-  width: 100%;
-  height: fit-content;
+  width: inherit;
+  height: auto;
   align-self: center;
 }
 .visitante {
@@ -832,8 +833,8 @@ BANNER
   align-items: center;
 }
 .visitante img {
-  width: 100%;
-  height: fit-content;
+  width: inherit;
+  height: auto;
   align-self: center;
 }
 .btnjgs {
@@ -971,7 +972,6 @@ tbody:before {
   padding-bottom: 96px;
   background-image: url(../img/loja/efeitos/teste1.png);
   background-size: cover;
-  transition: background 0.8s;
   width: 100%;
   overflow: hidden;
 }
@@ -1047,6 +1047,9 @@ tbody:before {
   background-image: url(../img/loja/edu.jpg);
 }
 
+.flexloja a {
+  z-index: 2;
+}
 .flexloja:hover {
   box-shadow: 0 0 25px 0 #000;
 }
