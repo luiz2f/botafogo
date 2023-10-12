@@ -215,6 +215,12 @@ header {
   padding-bottom: 4px;
   border-bottom: 1px solid #ddd;
 }
+.subt:hover,
+.subt:active {
+  color: #222;
+
+  border-bottom: 1px solid #555;
+}
 .subt.pr {
   border-bottom: 1px solid transparent;
   cursor: default;
@@ -976,6 +982,7 @@ tbody:before {
   background-size: cover;
   width: 100%;
   overflow: hidden;
+  transition: background 0.8s;
 }
 
 .lojaonline.tche {

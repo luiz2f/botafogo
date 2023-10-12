@@ -268,27 +268,27 @@ nextBtnPt.addEventListener("click", next);
 prevBtnPt.addEventListener("click", prev);
 
 // touch
-janelaPt.addEventListener("touchstart", (e) => {
-  console.log(1);
-  screenWidth = dragNt.offsetWidth;
-  isDown = true;
-  startX = e.changedTouches[0].clientX;
-});
-janelaPt.addEventListener("touchcancel", mouseleavePt);
-janelaPt.addEventListener("touchend", mouseleavePt);
-janelaPt.addEventListener("touchmove", (e) => {
-  console.log(2);
+// janelaPt.addEventListener("touchstart", (e) => {
+//   console.log(1);
+//   screenWidth = dragNt.offsetWidth;
+//   isDown = true;
+//   startX = e.changedTouches[0].clientX;
+// });
+// janelaPt.addEventListener("touchcancel", mouseleavePt);
+// janelaPt.addEventListener("touchend", mouseleavePt);
+// janelaPt.addEventListener("touchmove", (e) => {
+//   console.log(2);
 
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.changedTouches[0].clientX;
-  const walk = x - startX;
-  walkperc = (walk / screenWidth) * 100;
-  let percroll = atual * 100;
-  let margroll = atual * 48;
+//   if (!isDown) return;
+//   e.preventDefault();
+//   const x = e.changedTouches[0].clientX;
+//   const walk = x - startX;
+//   walkperc = (walk / screenWidth) * 100;
+//   let percroll = atual * 100;
+//   let margroll = atual * 48;
 
-  rollPt.style.transform = `translateX(calc(-${walkperc}% -${percroll}% - ${margroll}px))`;
-});
+//   rollPt.style.transform = `translateX(calc(-${walkperc}% -${percroll}% - ${margroll}px))`;
+// });
 
 function mouseleavePt() {
   console.log(3);
