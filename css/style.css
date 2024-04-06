@@ -24,8 +24,8 @@ header {
 .headerflex {
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.45) 25%,
-    rgba(0, 0, 0, 0.25) 75%
+    rgba(0, 0, 0, 0.75) 25%,
+    rgba(0, 0, 0, 0.65) 75%
   );
 
   height: 180px;
@@ -112,14 +112,14 @@ header {
   z-index: 5;
 }
 
-.borda {
+/* .borda {
   width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -1%);
   z-index: 1;
-}
+} */
 .escdiv {
   height: 199px;
   /* width: 177px; */
@@ -453,9 +453,9 @@ a .iconeentrar {
 .glorioso {
   transition: all 0.3s, opacity 2s;
 }
-.borda {
+/* .borda {
   transition: all 0.5s;
-}
+} */
 .grad.scrollup {
   transform: translateY(-50%);
 }
@@ -470,10 +470,10 @@ a .iconeentrar {
   height: 80px;
 }
 
-.scrollup .borda {
+/* .scrollup .borda {
   width: 30%;
   top: 70px;
-}
+} */
 
 .grad.hide {
   transform: translate(0, -125%);
