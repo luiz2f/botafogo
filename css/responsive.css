@@ -483,9 +483,7 @@
   .parceiros .patrow:last-child .patroimgbox:nth-child(-n + 2) {
     grid-row: 2;
   }
-  .grad {
-    background-size: 200%;
-  }
+
   .jogosclas h3 {
     font-size: 28px;
   }
@@ -759,9 +757,7 @@
   .acoes {
     height: 30px;
   }
-  .grad {
-    background-size: 250%;
-  }
+
   .headerflex {
     height: 110px;
   }
